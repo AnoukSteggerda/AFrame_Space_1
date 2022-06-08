@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width">
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="scripts/main.js" defer></script>
+
   </head>
   <body>
     <a-scene background="color: #FAFAFA">
@@ -27,7 +28,7 @@
         material = "src: #space">
       </a-sky>
 
-      <!--position: left right, up down, further closer-->
+      <!--position: left right, up down, further closer-->   
       
       <a-sphere 
         position="-12 1.25 -5" 
@@ -42,7 +43,7 @@
         shadow>
       </a-sphere>
 
-      <a-light light="type: point; distance: 22; color: #FFFFFF; intensity: 1.5"  position="-8 1.25 -5">
+      <a-light light="type: point; distance: 22; color: #FFFFFF; intensity: 1.5 castShadow: true"  position="-8 1.25 -5">
       </a-light>
       
       <a-sphere 
@@ -132,6 +133,7 @@
           radius-tubular="0.1"
           rotation="90 0 0"
           scale=".44 .44 0.04"
+          animation="property: rotation; to:  90 0 0; loop: true; dur: 3000"
         ></a-torus>
 
       <!--binnenste cirkel-->
@@ -144,6 +146,7 @@
         radius-tubular="0.2"
         rotation="90 0 0"
         scale=".44 .44 0.04"
+        animation="property: rotation; to:  90 0 0; loop: true; dur: 3000"
       ></a-torus>
 
       <a-sphere 
