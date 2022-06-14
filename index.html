@@ -23,9 +23,11 @@
         <img id="uranus" src="images/uranus.jpg" crossorigin="anonymous" />
         <img id="neptune" src="images/neptune.jpg" crossorigin="anonymous" />
       </a-assets>
-      <a-entity position="3 0 2" rotation="0 0 0">
-        <a-camera></a-camera>
-      </a-entity>
+     
+      <a-camera position="3 1 2" id="myCamera">
+        <a-cursor intersection-spawn="Event:click; mixin:voxel;">
+        </a-cursor>
+      </a-camera>
 
       <a-entity position="-12 1.25 -5"  particle-system="preset: dust; particleCount: 1000"></a-entity>
 
@@ -33,7 +35,6 @@
         color = "#FFFFFF" 
         material = "src: #space">
       </a-sky>
-      
 
       <!--position: left right, up down, further closer-->   
       
@@ -184,6 +185,7 @@
       </a-sphere>
 
       <a-sphere 
+        id="neptune"
         position="10.5 1.25 -5" 
         radius=".65" 
         material = "src: #neptune;"
@@ -197,4 +199,13 @@
       </a-sphere>
     </a-scene>
   </body>
+
+  <script>
+    document
+    .querySelector("#neptune")
+    .addEventListener("mouseenter", e => {
+      location.href = "textures/neptune.html";
+    });
+  </script>
+
 </html>
