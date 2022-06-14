@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Hello, WebVR! • A-Frame</title>
+    <title>The Solar System</title>
     <meta name="viewport" content="width=device-width">
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script> <!--falling stars-->
@@ -23,16 +23,17 @@
         <img id="uranus" src="images/uranus.jpg" crossorigin="anonymous" />
         <img id="neptune" src="images/neptune.jpg" crossorigin="anonymous" />
       </a-assets>
-      <a-entity position="-8 0 2" rotation="0 0 0">
+      <a-entity position="3 0 2" rotation="0 0 0">
         <a-camera></a-camera>
       </a-entity>
 
-      <a-entity position="0 0 0" particle-system="preset: dust" ParticleCount="10000" size="3"></a-entity>
+      <a-entity position="-12 1.25 -5"  particle-system="preset: dust; particleCount: 1000"></a-entity>
 
       <a-sky
         color = "#FFFFFF" 
         material = "src: #space">
       </a-sky>
+      
 
       <!--position: left right, up down, further closer-->   
       
@@ -49,30 +50,22 @@
         shadow>
       </a-sphere>
 
-      <a-light light="type: point; distance: 28; color: #FFFFFF; intensity: 1.5 castShadow: true"  position="-8 1.25 -5">
-      </a-light>
-      <a-light light="type: point; distance: 28; color: #FFFFFF; intensity: 1.5 castShadow: true"  position="-16 1.25 -5">
-      </a-light>
-
-      <!--front-->
-      <a-light light="type: point; distance: 5; color: #FFFFFF; intensity: 1.5 castShadow: true"  position="-14 1.25 -2">
-      </a-light>
-      <a-light light="type: point; distance: 5; color: #FFFFFF; intensity: 1.5 castShadow: true"  position="-12 1.25 0">
-      </a-light>
-      <a-light light="type: point; distance: 5; color: #FFFFFF; intensity: 1.5 castShadow: true"  position="-10 1.25 4">
-      </a-light>
-      <a-light light="type: point; distance: 5; color: #FFFFFF; intensity: 1.5 castShadow: true"  position="-8 2 0">
-      </a-light>
-      <a-light light="type: point; distance: 5; color: #FFFFFF; intensity: 1.5 castShadow: true"  position="-6 2 -2">
+      <!-- right-->
+      <a-light light="type: point; distance: 28; color: #FFFFFF; intensity: 1.5 castShadow: true"  
+      position="-8 1.25 -5">
+      </a-light> 
+      <!--left -->
+      <a-light light="type: ambient; color: #FFFFFF; intensity: 0.5;"  
+      position="-30 1.25 -5">
       </a-light>
 
-      <!--top-->
-      <a-light light="type: point; distance: 5; color: #FFFFFF; intensity: 1.5 castShadow: true"  position="-12 5.25 -5">
+      <!-- middle -->
+      <!-- <a-light light="type: point; distance: 10; color: #FFFFFF; intensity: 1.5 castShadow: true"  
+      position="-13 1.25 5">
       </a-light>
-      <a-light light="type: point; distance: 5; color: #FFFFFF; intensity: 1.5 castShadow: true"  position="-12 5 -3">
-      </a-light>
-      <a-light light="type: point; distance: 5; color: #FFFFFF; intensity: 1.5 castShadow: true"  position="-12 5 -7">
-      </a-light>
+      <a-light light="type: point; distance: 10; color: #FFFFFF; intensity: 1.5 castShadow: true"  
+      position="-10 1.25 -15">
+      </a-light> -->
       
       <a-sphere 
         position="-7 1.25 -5" 
@@ -197,19 +190,6 @@
         animation="
           property: object3D.rotation.y;
           to: 230;
-          dur: 20000;
-          easing: linear;
-          loop: true"
-        shadow>
-      </a-sphere>
-
-      <a-sphere 
-        position="13 1.25 -5" 
-        radius="1" 
-        material = "src: #custom;"
-        animation="
-          property: object3D.rotation.y;
-          to: 85;
           dur: 20000;
           easing: linear;
           loop: true"
