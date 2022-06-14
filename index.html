@@ -25,7 +25,7 @@
       </a-assets>
      
       <a-camera position="3 1 2" id="myCamera">
-        <a-cursor intersection-spawn="Event:click; mixin:voxel;">
+        <a-cursor intersection-spawn="Event: click; mixin: voxel;">
         </a-cursor>
       </a-camera>
 
@@ -82,6 +82,7 @@
       </a-sphere>
       
       <a-sphere 
+        id="venus"
         position="-5 1.25 -5" 
         radius=".4" 
         material = "src: #venus;"
@@ -172,6 +173,7 @@
       ></a-torus>
 
       <a-sphere 
+        id="uranusPlanet"
         position="8 1.25 -5" 
         radius=".7" 
         material = "src: #uranus;"
@@ -185,7 +187,7 @@
       </a-sphere>
 
       <a-sphere 
-        id="neptune"
+        id="neptunePlanet"
         position="10.5 1.25 -5" 
         radius=".65" 
         material = "src: #neptune;"
@@ -202,10 +204,15 @@
 
   <script>
     document
-    .querySelector("#neptune")
-    .addEventListener("mouseenter", e => {
-      location.href = "textures/neptune.html";
+    .querySelector("#neptunePlanet")
+    .addEventListener("click", e => {
+      location.href = "neptune.html";
+    });
+
+    document
+    .querySelector("#uranusPlanet")
+    .addEventListener("click", e => {
+      location.href = "level1.html";
     });
   </script>
-
 </html>
